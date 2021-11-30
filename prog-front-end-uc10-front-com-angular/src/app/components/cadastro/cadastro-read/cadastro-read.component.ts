@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Cadastro } from '../cadastro.model';
+import { CadastroService } from '../cadastro.service';
 
 @Component({
   selector: 'app-cadastro-read',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroReadComponent implements OnInit {
 
-  constructor() {}
+  cadastros!: Cadastro[]
+  displayedColumns = ["id", "nome", "email", "cpf", "dataNasc", "telefone","action"];
+
+  constructor(private cadastroService: CadastroService) {}
 
   ngOnInit(): void {
+    
+    this.cadastroService.read().subscrible(cadastros => {
+      this.cadastros = cadastros
+    })
   }
 
 }

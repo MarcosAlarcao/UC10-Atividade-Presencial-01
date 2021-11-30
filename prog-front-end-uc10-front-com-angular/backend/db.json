@@ -1,6 +1,15 @@
 {
   "casa": [],
-  "cadastro": [],
+  "cadastro": [
+    {
+      "email": "1222333",
+      "cpf": "46542134621322",
+      "nome": "nmyuhgf",
+      "dataNasc": "2021-11-29",
+      "telefone": "14 99999999",
+      "id": 1
+    }
+  ],
   "compra": [],
   "evento": []
 }
