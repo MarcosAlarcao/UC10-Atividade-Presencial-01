@@ -16,7 +16,7 @@ export class CadastroReadComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.cadastroService.read().subscrible(cadastros => {
+    this.cadastroService.read().subscribe(cadastros => {
       this.cadastros = cadastros
     })
   }
